@@ -6384,11 +6384,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\COLDFIRE\\Documents\\我的项目\\webapi_mysql8\\LRMS.Server.csproj",
+      "projectUniqueName": "C:\\Users\\COLDFIRE\\Documents\\我的项目\\LRMS.Server\\LRMS.Server.csproj",
       "projectName": "LRMS.Server",
-      "projectPath": "C:\\Users\\COLDFIRE\\Documents\\我的项目\\webapi_mysql8\\LRMS.Server.csproj",
+      "projectPath": "C:\\Users\\COLDFIRE\\Documents\\我的项目\\LRMS.Server\\LRMS.Server.csproj",
       "packagesPath": "C:\\Users\\COLDFIRE\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\COLDFIRE\\Documents\\我的项目\\webapi_mysql8\\obj\\",
+      "outputPath": "C:\\Users\\COLDFIRE\\Documents\\我的项目\\LRMS.Server\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
