@@ -19,7 +19,7 @@
         },
         "LRMS.Server": {
             "commandName": "Project",
-            "launchBrowser": true,
+            "launchBrowser": false,
             "launchUrl": "UserLogin",
             "applicationUrl": "http://localhost:5000",
             "environmentVariables": {

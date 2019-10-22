@@ -4,6 +4,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 
 namespace LRMS.Server.Controllers
@@ -19,15 +20,32 @@ namespace LRMS.Server.Controllers
             _db = db;
         }
 
-        [HttpGet]
-        public async Task<IActionResult> Getuserinfo()
+        [HttpPost]
+        public async Task<IActionResult> LogIn([FromBody] UserLoginModel md)
         {
-            var metadata = _db.user_login.FirstOrDefault();
+            var metas = from m in _db.user_login
+                        where m.username == md.username
+                        select m;
+            await Task.Delay(0);
+            UserLoginModel meta = metas.FirstOrDefault();
+            if (meta == null)
+            {
+                return new JsonResult("No account.");
+            }
+            if (meta.password == md.password)
+            {
+                Debug.WriteLine("I am here  " + meta.username + "  " + meta.password);
+                return new JsonResult("OK!");
+            }
+            else
+            {
+                return new JsonResult("Password not matched.");
+            }
 
             // 获取数据库里某个值
-            await Task.Delay(500);
+            // await Task.Delay(0);
 
-            return new JsonResult(metadata);
+            // return new JsonResult(metadata);
         }
 
         [HttpPost]
